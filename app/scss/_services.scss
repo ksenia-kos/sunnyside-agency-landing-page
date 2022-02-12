@@ -57,5 +57,13 @@
 
     &__text{
         margin: 58px $margin-mobile;
+
+        @media only screen and (min-width: $breakpoint-up-1) {
+            margin: 58px $margin-tablet;
+        }
+
+        @media only screen and (min-width: $breakpoint-up-2) {
+            margin: 58px calc(#{$margin-desktop} * 2 + 20px) ;
+        }
     }
 }

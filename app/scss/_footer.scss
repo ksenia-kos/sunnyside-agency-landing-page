@@ -1,8 +1,12 @@
-.footer{
+.footer {
     background-color: $light-green;
     color: $dark-moderate-cyan;
     padding: 58px 0 76px 0;
     text-align: center;
+
+    @media only screen and (min-width: $breakpoint-up-2) {
+        padding: 70px 0 64px 0;
+    }
 
     &__logo {
         display: inline-block; // to turn inline element <a> into inline-block element and make margin work

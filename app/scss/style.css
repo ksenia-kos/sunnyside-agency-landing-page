@@ -247,7 +247,7 @@ button {
 }
 
 .header__menu .desktop-menu a:not(:last-child) {
-  margin-right: 48px;
+  margin-right: 3rem;
 }
 
 .header h1 {
@@ -504,6 +504,18 @@ button {
   margin: 58px 6.1%;
 }
 
+@media only screen and (min-width: 37.5em) {
+  .services__text {
+    margin: 58px 9%;
+  }
+}
+
+@media only screen and (min-width: 64em) {
+  .services__text {
+    margin: 58px calc(11.49% * 2 + 20px);
+  }
+}
+
 .testimonials {
   background-color: #fffcfa;
   padding-top: 56px;
@@ -671,6 +683,12 @@ button {
   color: #458c7e;
   padding: 58px 0 76px 0;
   text-align: center;
+}
+
+@media only screen and (min-width: 64em) {
+  .footer {
+    padding: 70px 0 64px 0;
+  }
 }
 
 .footer__logo {
