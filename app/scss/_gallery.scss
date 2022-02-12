@@ -1,0 +1,57 @@
+.gallery {
+    display: grid;
+    grid-template: 1fr 1fr / 1fr 1fr;
+    @media only screen and (min-width: $breakpoint-up-2) {
+        grid-template: 1fr / repeat(4, 1fr);
+    }
+
+    .photo {
+        position: relative;
+        width: 100%;
+        height: 0;
+        padding-bottom: 100%; // in relation to the width
+
+        @media only screen and (min-width: $breakpoint-up-2){
+            padding-bottom: 124%; // in relation to the width
+        }
+    }
+
+    .image1, .image2, .image3, .image4 {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .image1 {
+        background-image: url(../../images/mobile/image-gallery-milkbottles.jpg);
+        @media only screen and (min-width: $breakpoint-up-2) {
+            background-image: url(../../images/desktop/image-gallery-milkbottles.jpg);
+        }
+    }
+
+    .image2 {
+        background-image:url(../../images/mobile/image-gallery-orange.jpg);
+        @media only screen and (min-width: $breakpoint-up-2) {
+            background-image: url(../../images/desktop/image-gallery-orange.jpg);
+        }
+    }
+
+    .image3 {
+        background-image:url(../../images/mobile/image-gallery-cone.jpg);
+        @media only screen and (min-width: $breakpoint-up-2) {
+            background-image: url(../../images/desktop/image-gallery-cone.jpg);
+        }
+    }
+
+    .image4 {
+        background-image: url(../../images/mobile/image-gallery-sugar-cubes.jpg);
+        @media only screen and (min-width: $breakpoint-up-2) {
+            background-image: url(../../images/desktop/image-gallery-sugarcubes.jpg);
+        }
+    }
+
+
+}

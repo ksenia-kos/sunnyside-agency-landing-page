@@ -1,0 +1,128 @@
+.features {
+
+    @media only screen and (min-width: $breakpoint-up-2) {
+        display: grid;
+        grid-template: 1fr 1fr / 1fr 1fr;
+    }
+    
+    .feature1__image, .feature2__image {
+        height: 312px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        @media only screen and (min-width: $breakpoint-up-1) {
+            height: 400px; // to override mobile height
+        }
+        @media only screen and (min-width: $breakpoint-up-2) {
+            height: 600px; // to override tablet height
+        }
+    }
+
+    .feature1__image {
+        background-image: url(../../images/mobile/image-transform.jpg);
+        @media only screen and (min-width: $breakpoint-up-1) {
+            background-image: url(../../images/desktop/image-transform.jpg);
+            grid-column: 2 / 3;
+        }
+    }
+
+    .feature2__image {
+        background-image: url(../../images/desktop/image-stand-out.jpg);
+        @media only screen and (min-width: $breakpoint-up-1) {
+            background-image: url(../../images/desktop/image-stand-out.jpg);
+        }
+    }
+
+    .feature1__text, .feature2__text {
+        text-align: center;
+        padding: 62px $margin-mobile;
+        background-color: $cream;
+
+        @media only screen and (min-width: $breakpoint-up-2) {
+
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: center;
+
+            h2, p, a {
+                text-align: left;
+            }
+        }
+
+        h2 {
+            margin-bottom: 30px;
+        }
+
+        p {
+            margin-bottom: 30px;
+        }
+
+        a {
+            position: relative;
+            text-align: center;
+            font-family: 'Fraunces', serif;
+            font-size: 1rem;
+            letter-spacing: 0.7px;
+            color: $very-dark-desaturated-blue;
+            text-transform: uppercase;
+            text-align: center;
+            z-index: 1;
+
+            &::after {
+                content: "";
+                position: absolute;
+                z-index: -1; // to put it behind its parent
+                height: 10px;
+                width: 136px;
+                left: -6px;
+                bottom: -2px;
+                border-radius: 5px;
+                opacity: 50%;
+                transition: opacity 200ms ease-in-out;
+            }
+
+            &:hover {
+
+                &::after {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    .feature1__text {
+
+        @media only screen and (min-width: $breakpoint-up-2) {
+            grid-column: 1 / 2;
+            grid-row: 1 / 2;
+            padding-left: calc(#{$margin-desktop} * 2);
+            padding-right: 14.72%;
+        }
+
+        a::after {
+            background-color: $yellow;
+        }
+    }
+
+    .feature2__text {
+
+        @media only screen and (min-width: $breakpoint-up-2) {
+            padding-right: calc(#{$margin-desktop} * 2);
+            padding-left: 14.72%;
+        }
+
+        a::after {
+            background-color: $soft-red;
+        }
+    }
+
+    .learnMore {
+        text-align: center;
+
+        @media only screen and (min-width: $breakpoint-up-2) {
+            text-align: left;
+        }
+
+    }
+    
+}

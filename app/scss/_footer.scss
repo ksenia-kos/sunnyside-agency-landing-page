@@ -1,0 +1,51 @@
+.footer{
+    background-color: $light-green;
+    color: $dark-moderate-cyan;
+    padding: 58px 0 76px 0;
+    text-align: center;
+
+    &__logo {
+        display: inline-block; // to turn inline element <a> into inline-block element and make margin work
+        margin-bottom: 36px;
+
+        img {
+            width: 170px;
+        }
+    }
+
+    &__links {
+        margin-bottom: 80px;
+
+        a {
+            color: $dark-moderate-cyan;
+            transition: all 200ms ease-in-out;
+
+            &:not(:last-child){
+                margin-right: 48px;
+            }
+
+            &:hover {
+                color: $white;
+            }
+        }
+    }
+
+    &__social {
+
+        a {
+            display: inline-block;
+
+            &:not(:last-child) {
+                margin-right: 25px;
+            }
+
+            svg path {
+                transition: all 200ms ease-in-out;
+            }
+
+            &:hover svg path {
+                fill: $white;
+            }
+        }
+    }
+}

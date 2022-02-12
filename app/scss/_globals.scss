@@ -1,0 +1,113 @@
+html {
+    font-size: 100%; /* lets user have control over size of text on their screen */
+    box-sizing: border-box; /* final width of an element will include padding */
+}
+
+*, 
+*::before, 
+::after {
+    box-sizing: inherit; /* all elements inherit box-sizing from html element */
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Barlow', sans-serif;
+    font-size: 1.125rem; // 18px
+    font-weight: 500;
+    line-height: 1.667; // 30px
+    color: $dark-grayish-blue;
+}
+
+// Typography
+
+h1, h2, h3, h4 {
+    font-family: 'Fraunces', serif;
+    text-align: center;
+}
+
+h1, h2, h3 {
+    font-weight: 900;
+}
+
+h1 {
+    font-size: 2.5rem; // 40px
+    color: $white;
+    text-transform: uppercase;
+    letter-spacing: 0.18em; // 18%
+    line-height: 1.225;
+    @media only screen and (min-width: $breakpoint-up-2){
+        font-size: 3.5rem; // 50px
+    }
+}
+
+h2 {
+    font-size: 2rem; // 32px
+    color: $very-dark-desaturated-blue;
+    line-height: 1.21875;
+    @media only screen and (min-width: $breakpoint-up-2){
+        font-size: 2.5rem; // 40px
+    }
+}
+
+h3 {
+    font-size: 1.75rem; // 28px
+}
+
+h4 {
+    font-weight: 700;
+    font-size: 1rem; // 16px
+    color: $grayish-blue;
+    text-transform: uppercase;
+    letter-spacing: 0.28em; // 28%
+    @media only screen and (min-width: $breakpoint-up-2){
+        font-size: 1.25rem; // 20px
+    }
+}
+
+p {
+    text-align: center;
+    margin-bottom: 0;
+}
+
+// Links
+a {
+    text-decoration: none;
+    color: $dark-grayish-blue;
+    font-size: 1.125rem; // 18px
+}
+
+//Buttons
+button {
+    padding: 1.0625rem 1.8125rem; // 17px
+    color: #000;
+    background-color: $yellow;
+    border: none;
+    border-radius: 50px;
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+    font-size: 1rem; // 16px
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 200ms ease-in-out;
+
+    @media only screen and (min-width: $breakpoint-up-2){
+        background-color: $white;
+        &:hover {
+            color: $white;
+            background-color: hsl(200, 100, 72);
+        }
+    }
+}
+
+// Page Margins
+.container {
+    margin-left: $margin-mobile;
+    margin-right: $margin-mobile;
+    @media only screen and (min-width: $breakpoint-up-1){
+        margin-left: $margin-tablet;
+        margin-right: $margin-tablet;
+    }
+}

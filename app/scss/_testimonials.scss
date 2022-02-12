@@ -1,0 +1,66 @@
+.testimonials {
+    background-color: $cream;
+    padding-top: 56px;
+    padding-bottom: 32px;
+    text-align: center;
+    @media only screen and (min-width: $breakpoint-up-2) {
+        padding: 159px 0;
+    }
+
+    h4 {
+        margin-bottom: 56px;
+        @media only screen and (min-width: $breakpoint-up-2) {
+            margin-bottom: 77px;
+        }
+    }
+
+    &__container {
+        @media only screen and (min-width: $breakpoint-up-2) {
+            display: flex;
+        }
+    }
+
+    .testimonial {
+        margin-bottom: 56px;
+        @media only screen and (min-width: $breakpoint-up-2) {
+            margin-bottom: 0;
+        }
+
+        &:not(:last-child){
+            @media only screen and (min-width: $breakpoint-up-2) {
+                margin-right: 32px;
+            }
+        }
+
+        &__image {
+            width: 74px;
+            margin-bottom: 30px;
+            border-radius: 50%;
+            @media only screen and (min-width: $breakpoint-up-2) {
+                margin-bottom: 56px;
+            }
+        }
+
+        &__text {
+            margin-bottom: 30px;
+            line-height: 1.778;
+            @media only screen and (min-width: $breakpoint-up-2) {
+                margin-bottom: 56px;
+            }
+        }
+
+        &__author {
+            font-family: 'Fraunces', serif;
+            font-size: 1.125rem; // 18px
+            color: $very-dark-desaturated-blue;
+            text-align: center;
+            margin-bottom: 5px;
+        }
+
+        &__job {
+            font-size: 0.875rem; // 14px
+            text-align: center;
+            color: $grayish-blue;
+        }
+    }
+}
